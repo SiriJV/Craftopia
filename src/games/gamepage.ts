@@ -18,12 +18,7 @@ gamePageWindow.appendChild(gameWrappers);
 
 
 function createDivs(containerId: string, count: number) {
-    const container = document.getElementById(containerId);
-  
-    if (!container) {
-      console.error(`Container with id "${containerId}" not found.`);
-      return;
-    }
+    const container = document.getElementById(containerId) as HTMLElement;
   
     for (let i = 0; i < count; i++) {
       const newDiv = document.createElement('div');
