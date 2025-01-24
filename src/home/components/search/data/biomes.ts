@@ -6,6 +6,16 @@ enum BiomeDimensions {
     End = "End"
 }
 
+enum BiomeCategories {
+    nonlandBiomes = "Non-land biomes",
+    highlandBiomes = "Highland biomes",
+    woodlandBiomes = "Woodland biomes",
+    wetlandBiomes = "Wetland biomes",
+    flatlandBiomes = "Flatland biomes",
+    aridlandBiomes = "Arid-land biomes",
+    caveBiomes = "Cave biomes"
+}
+
 type Biome = {
     dimension: BiomeDimensions;
     category?: string;
@@ -17,7 +27,7 @@ type Biome = {
 const biomes: Biome[] = [
     {
         dimension: BiomeDimensions.Overworld,
-        category: "Non-land biomes",
+        category: BiomeCategories.nonlandBiomes,
         name: "Ocean",
         description: "The basic ocean biome. Like its colder variants, its floor is largely made up of gravel; however patches of dirt, sand and clay can also appear. Seagrass, kelp, cod and salmon can spawn here.",
         screenshot: ""

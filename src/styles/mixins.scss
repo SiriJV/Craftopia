@@ -1,0 +1,34 @@
+/////////////////////////////////////////
+/////////////// Borders /////////////////
+/////////////////////////////////////////
+
+@mixin inset-border {
+    background-color: #8B8B8B;
+    border-style: solid;
+    border-width: 4px;
+    border-bottom-color: #FFFFFF;
+    border-right-color: #FFFFFF;
+    border-top-color: #373737;
+    border-left-color: #373737;
+  }
+  
+  @mixin outset-border {
+    background: #C6C6C6;
+    border-style: solid;
+    border-width: 4px;
+    border-bottom-color: #373737;
+    border-right-color: #373737;
+    border-top-color: #FFFFFF;
+    border-left-color: #FFFFFF;
+    outline: 3px solid black;
+  }
+  
+  @mixin body-text {
+    font-family: pixel-font;
+    font-size: 11px;
+  }
+  
+  @mixin heading-text {
+    font-family: pixel-font;
+    font-size: 13px;
+  }

@@ -1,5 +1,100 @@
+@use './styles/mixins.scss';
+@use './home/home.scss';
+@use './home/components/sign/sign.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: pixel-font;
+  src: url(../public/typography/minecraft_standard/MinecraftStandard.otf);
+}
+
 body {
-  background-image: url(../public/images/netherrack.jpg);
-  background-repeat: repeat;
-  background-size: 10%;
+  background-image: url(../public/images/backgrounds/forest_background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: flex;
+  gap: 25px;
+}
+
+#search-box {
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  line-height: 1.5;
+  @include mixins.outset-border();
+  @include mixins.heading-text();
+
+  h2 {
+    color: #2a2a2a;
+  }
+
+  section {
+    width: 91%;
+    height: 84%;
+    @include mixins.inset-border();
+
+    input {
+      background-color: #8B8B8B;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      outline: none;
+      @include mixins.body-text();
+    }
+
+    ::placeholder {
+      color: #373737;
+    }
+  }
+}
+
+.minecraft-panel-two {
+  padding: 20px;
+  width: 300px;
+  height: 400px;
+  line-height: 1.5;
+  @include mixins.outset-border();
+  @include mixins.heading-text();
+
+  h2 {
+    color: #2a2a2a;
+  }
+}
+
+#img-acacia-boat {
+  width: 100px;
+  height: auto;
+  padding: 10px;
+  @include mixins.inset-border();
+  image-rendering: pixelated;
+}
+
+/////////////////////////////////////////
+///////////////// Sign //////////////////
+/////////////////////////////////////////
+
+
+/////////////////////////////////////////
+///////////////// Rose //////////////////
+/////////////////////////////////////////
+
+#rose-bush {
+  width: auto;
+  height: auto;
+  position: fixed;
+  bottom: -1%;
+  left: 1%;
+
+  img {
+    width: 200px;
+    image-rendering: pixelated;
+  }
 }

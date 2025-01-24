@@ -1,0 +1,30 @@
+#lantern {
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 0%;
+    right: 12%;
+    
+    #lantern-lit {
+      width: auto;
+      height: 130px;
+      image-rendering: pixelated;
+    }
+  
+    #lantern-unlit {
+      width: auto;
+      height: 130px;
+      image-rendering: pixelated;
+    }
+  }
+
+#glow {
+    width: 130px;
+    height: 130px;
+    background-color: #F9C966;
+    opacity: 50%;
+    position: fixed;
+    top: 4%;
+    right: 9.8%;
+    filter: blur(50px);
+}

@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,6 +7,54 @@
     <title>Craftopia</title>
   </head>
   <body>
+    <main>
+    <!--Search categories-->
+    <section class="custom-dropdown">
+      <button class="dropdown-selected">
+        <img src="https://minecraft-api.vercel.app/images/items/grass_block.png" alt="Blocks">
+        <p>></p>
+      </button>
+      <ul class="dropdown-options"></ul>
+    </section>
+
+    <!--Search box-->
+    <article id="search-box">
+      <h2>Search Items</h2>
+      <section>
+      <input placeholder="Search for any item..."></input>
+      <ul></ul>
+      </section>
+    </article>
+
+    <!--Search results-->
+    <article class="minecraft-panel-two">
+      <h2>Acacia Boat</h2>
+      <img id="img-acacia-boat" src="https://minecraft-api.vercel.app/images/items/acacia_boat.png" alt="Acacia Boat">
+    </article>
+  </main>
+
+    <!--Sign w/ contact info-->
+    <aside id="sign-wrapper">
+      <img src="./public/images/items/oak_sign_straight.webp" id="sign">
+      <p id="contact" >Contact:</p>
+      <a id="e-mail" href="mailto:siri.viren@icloud.com" target="_blank">siri.virén@icloud.com</a>
+      <a id="linkedin" href="https://www.linkedin.com/in/siri-jelsa-viren/" target="_blank">linkedin/siri-jelsa</a>
+    </aside>
+
+    <aside id="rose-bush">
+      <img src="./public/images/items/rose_bush.webp">
+    </aside>
+
+    <aside id="chest">
+      <img id="chest-closed" src="./public/images/items/chest.png">
+    </aside>
+    
+    <aside id="lantern">
+      <img id="lantern-lit" src="./public/images/items/lantern-lit.png">
+    </aside>
+
+    <div id="glow"></div>
+      
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
