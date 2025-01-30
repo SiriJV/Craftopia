@@ -14,4 +14,10 @@
         margin-left: 0;
         @include mixins.body-text();
     }
+
+    a {
+        @include mixins.body-text();
+        color: #00AA00;
+        text-decoration: underline;
+      }
 }
