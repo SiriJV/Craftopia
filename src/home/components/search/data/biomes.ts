@@ -1,5 +1,13 @@
 // dimension, category(inte alltid), name, description, screenshot
 
+export const renderBiome = (biome: Biome): string => `
+  <h3>${biome.name}</h3>
+  <img src="${biome.screenshot}" alt="${biome.name}">
+  <p>Dimension: ${biome.dimension}</p>
+  <p>Category: ${biome.category}</p>
+  <p>${biome.description}</p>
+`;
+
 enum BiomeDimensions {
     Overworld = "Overworld",
     Nether = "Nether",
@@ -24,7 +32,7 @@ type Biome = {
     screenshot: string;
 }
 
-const biomes: Biome[] = [
+export const biomes: Biome[] = [
     {
         dimension: BiomeDimensions.Overworld,
         category: BiomeCategories.nonlandBiomes,

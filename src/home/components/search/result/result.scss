@@ -1,0 +1,17 @@
+@use '../../../../styles/mixins.scss';
+
+#minecraft-panel-two {
+    img {
+        width: 100px;
+        height: auto;
+        padding: 10px;
+        @include mixins.inset-border();
+        image-rendering: pixelated;
+    }
+
+    p {
+        margin: 15px;
+        margin-left: 0;
+        @include mixins.body-text();
+    }
+}

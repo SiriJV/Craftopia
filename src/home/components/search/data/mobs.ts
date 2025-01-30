@@ -1,5 +1,12 @@
 // category, name, description, screenshot
 
+export const renderMob = (mob: Mob): string => `
+  <h3>${mob.name}</h3>
+  <img src="${mob.screenshot}" alt="${mob.name}">
+  <p>Category: ${mob.category}</p>
+  <p>${mob.description}</p>
+`;
+
 enum MobCategories {
     passiveMobs = "Passive mobs",
     neutralMobs = "Neutral mobs",
@@ -14,7 +21,7 @@ type Mob = {
     screenshot: string;
 }
 
-const mobs: Mob[] = [
+export const mobs: Mob[] = [
     {
         category: MobCategories.passiveMobs,
         name: "Allay",

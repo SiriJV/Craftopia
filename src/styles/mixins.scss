@@ -26,6 +26,7 @@
   @mixin body-text {
     font-family: pixel-font;
     font-size: 11px;
+    // font-weight: normal;
   }
   
   @mixin heading-text {

@@ -11,6 +11,7 @@
 @font-face {
   font-family: pixel-font;
   src: url(../public/typography/minecraft_standard/MinecraftStandard.otf);
+  font-weight: normal;
 }
 
 @font-face {
@@ -24,6 +25,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  overflow: hidden;
 }
 
 main {
@@ -75,10 +77,14 @@ main {
     ::placeholder {
       color: #373737;
     }
+
+    ul {
+      height: 88.1%;
+    }
   }
 }
 
-.minecraft-panel-two {
+#minecraft-panel-two {
   grid-area: middle-right;
   padding: 20px;
   width: 350px;
@@ -100,11 +106,6 @@ main {
   @include mixins.inset-border();
   image-rendering: pixelated;
 }
-
-/////////////////////////////////////////
-///////////////// Sign //////////////////
-/////////////////////////////////////////
-
 
 /////////////////////////////////////////
 ///////////////// Rose //////////////////

@@ -1,0 +1,22 @@
+@use '../../../styles/mixins.scss';
+
+li {
+    list-style: none;
+    @include mixins.outset-border();
+    @include mixins.body-text();
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    outline: 0;
+    // margin: 10px;
+    padding-left: 15px;
+    
+    img {
+      image-rendering: pixelated;
+      padding-bottom: 11px;
+    }
+}
+
+ul {
+    overflow-y: scroll;
+}
