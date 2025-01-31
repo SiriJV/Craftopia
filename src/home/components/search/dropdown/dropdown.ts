@@ -55,6 +55,8 @@ optionsList.addEventListener('click', async (e) => {
     selectedCategory = target.alt;
     const h2 = document.getElementById('search-category-h2') as HTMLElement;
     h2.innerHTML = target.alt;
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    searchInput.placeholder = `Search for any ${target.alt}`;
 
     switch (selectedCategory) {
       case "Items":

@@ -1,30 +1,33 @@
-#lantern {
+#torch {
     width: auto;
     height: auto;
     position: fixed;
-    top: 0%;
-    right: 12%;
+    bottom: 50%;
+    left: 0.6%;
+    transform: rotate(30deg);
     
-    #lantern-lit {
+    #torch-lit {
       width: auto;
       height: 130px;
       image-rendering: pixelated;
     }
   
-    #lantern-unlit {
+    #torch-unlit {
       width: auto;
       height: 130px;
       image-rendering: pixelated;
     }
   }
 
-#lantern-glow {
-    width: 180px;
-    height: 180px;
+#torch-glow {
+    width: 140px;
+    height: 140px;
     background-color: #F9C966;
     opacity: 55%;
     position: fixed;
-    top: 2%;
-    right: 8%;
+    bottom: 57%;
+    left: -1%;
+    z-index: 1;
     filter: blur(65px);
+    // border-radius: 50%;
 }
