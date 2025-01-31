@@ -66,12 +66,18 @@ main {
     @include mixins.inset-border();
 
     input {
-      background-color: #8B8B8B;
+      // background-color: #8B8B8B;
       border: none;
       padding: 10px;
       width: 100%;
       outline: none;
       @include mixins.body-text();
+      background-color: #DEB12D;
+      border-bottom: 4px solid #48390f;
+      border-right: 4px solid #48390f;
+      border-top: 4px solid #ffe28c;
+      border-left: 4px solid #ffe28c;
+      outline: 0px;
     }
 
     ::placeholder {
@@ -79,7 +85,7 @@ main {
     }
 
     ul {
-      height: 88.1%;
+      height: 85.9%;
     }
   }
 }

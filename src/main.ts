@@ -7,3 +7,5 @@ import './home/components/search/dropdown/dropdown';
 import './minigames/gamepage';
 import '../src/home/components/search/data/items';
 import '../src/home/components/search/search';
+
+// defineConfig();

@@ -1,2 +1,37 @@
+@use '../styles/mixins.scss';
 
+hero {
+    // background-color: pink;
+    margin: 10px;
+    position: absolute;
+    top: 0;
 
+    h2 {
+    @include mixins.heading-text();
+    }
+
+    p {
+    @include mixins.body-text();
+    color: yellow;
+    }
+
+    a {
+    @include mixins.body-text();
+    color: blueviolet; 
+    text-decoration: underline;
+    }
+}
+
+#pig-body {
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+    width: 120px;
+    height: auto;
+}
+
+#pig-head {
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+}
