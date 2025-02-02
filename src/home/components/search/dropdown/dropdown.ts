@@ -44,7 +44,7 @@ dropdown.querySelector('.dropdown-selected')!.addEventListener('click', () => {
 const optionsList = dropdown.querySelector('.dropdown-options') as HTMLElement;
 
 let selectedCategory = "Blocks";
-performSearch(await fetchBlocks(), renderBlock, "minecraft-panel-two");
+performSearch(await fetchBlocks(), renderBlock, "info-wrapper");
 
 optionsList.addEventListener('click', async (e) => {
   const target = e.target as HTMLImageElement;
@@ -66,16 +66,16 @@ optionsList.addEventListener('click', async (e) => {
 
     switch (selectedCategory) {
       case "Items":
-        performSearch(await fetchItems(), renderItem, "minecraft-panel-two");
+        performSearch(await fetchItems(), renderItem, "info-wrapper");
         break;
         case "Blocks":
-          performSearch(await fetchBlocks(), renderBlock, "minecraft-panel-two");
+          performSearch(await fetchBlocks(), renderBlock, "info-wrapper");
         break;
       case "Biomes":
-        performSearch(biomes, renderBiome, "minecraft-panel-two");
+        performSearch(biomes, renderBiome, "info-wrapper");
         break;
         case "Mobs":
-        performSearch(mobs, renderMob, "minecraft-panel-two");
+        performSearch(mobs, renderMob, "info-wrapper");
         break;
     }
 

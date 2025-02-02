@@ -6,7 +6,6 @@ export async function fetchItems() {
 }
 
 export const renderItem: (item: Item) => string = (item) => `
-  <h2>${item.name}</h2>
   <img src="${item.image}" alt="${item.name}">
   <p>${item.description}</p>
   <p>NamespacedId:${item.namespacedId}</p>

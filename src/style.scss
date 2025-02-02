@@ -66,18 +66,18 @@ main {
     @include mixins.inset-border();
 
     input {
-      // background-color: #8B8B8B;
+      background-color: #8B8B8B;
       border: none;
       padding: 10px;
       width: 100%;
       outline: none;
       @include mixins.body-text();
-      background-color: #DEB12D;
-      border-bottom: 4px solid #48390f;
-      border-right: 4px solid #48390f;
-      border-top: 4px solid #ffe28c;
-      border-left: 4px solid #ffe28c;
-      outline: 0px;
+      // background-color: #DEB12D;
+      // border-bottom: 4px solid #48390f;
+      // border-right: 4px solid #48390f;
+      // border-top: 4px solid #ffe28c;
+      // border-left: 4px solid #ffe28c;
+      // outline: 0px;
     }
 
     ::placeholder {
@@ -85,7 +85,7 @@ main {
     }
 
     ul {
-      height: 85.9%;
+      height: 88.1%;
     }
   }
 }
@@ -102,6 +102,12 @@ main {
   h2 {
     color: #2a2a2a;
     margin-bottom: 10px;
+  }
+
+  section {
+    width: auto;
+    height: 90%;
+    @include mixins.inset-border();
   }
 }
 
@@ -127,5 +133,83 @@ main {
   img {
     width: 200px;
     image-rendering: pixelated;
+  }
+}
+
+#nether-portal-gif {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    width: 300px;
+    height: 300px;
+    image-rendering: pixelated;
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body {
+    overflow-y: scroll;
+    // padding: 25px;
+    height: auto;
+    background-repeat: repeat;
+  }
+
+  #dropdown-searchbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  #minecraft-panel-two {
+    min-height: 450px;
+  }
+
+  #chest {
+    display: none;
+  }
+
+  #rose-bush {
+    display: none;
+  }
+
+  #lantern {
+    display: none;
+  }
+
+  #torch {
+    display: none;
+  }
+
+  #lantern-glow {
+    display: none;
+  }
+
+  #torch-glow {
+    display: none;
+  }
+
+  hero {
+    max-width: 250px;
+
+    p {
+      display: none;
+    }
   }
 }

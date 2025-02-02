@@ -1,7 +1,6 @@
 // category, name, description, screenshot
 
 export const renderMob = (mob: Mob): string => `
-  <h2>${mob.name}</h2>
   <img src="${mob.screenshot}" alt="${mob.name}">
   <p>Category: ${mob.category}</p>
   <p>${mob.description}</p>

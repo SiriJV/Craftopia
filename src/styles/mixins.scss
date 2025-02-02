@@ -33,9 +33,3 @@
     font-family: pixel-font;
     font-size: 13px;
   }
-
-  @mixin phone {
-    @media (max-width: 599px) {
-      @content
-    }
-  }

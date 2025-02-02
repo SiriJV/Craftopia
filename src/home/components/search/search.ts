@@ -56,6 +56,8 @@ export function performSearch<T extends SearchableItem>(
 
         listItem.addEventListener("click", () => {
           displayContent(item, render, wrapperId);
+          const h2 = document.getElementById('info-h2') as HTMLElement;
+          h2.innerHTML = `${item.name}`;
 
           const matchingRecipe = craftingRecipes.find(
             (recipe) => recipe.item.toLowerCase() === item.name.toLowerCase()
