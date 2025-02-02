@@ -1,6 +1,7 @@
 @use './styles/mixins.scss';
 @use './home/home.scss';
 @use './home/components/sign/sign.scss';
+@use './styles/root.scss';
 
 * {
   margin: 0;
@@ -72,12 +73,6 @@ main {
       width: 100%;
       outline: none;
       @include mixins.body-text();
-      // background-color: #DEB12D;
-      // border-bottom: 4px solid #48390f;
-      // border-right: 4px solid #48390f;
-      // border-top: 4px solid #ffe28c;
-      // border-left: 4px solid #ffe28c;
-      // outline: 0px;
     }
 
     ::placeholder {
@@ -111,13 +106,6 @@ main {
   }
 }
 
-#img-acacia-boat {
-  width: 100px;
-  height: auto;
-  padding: 10px;
-  @include mixins.inset-border();
-  image-rendering: pixelated;
-}
 
 /////////////////////////////////////////
 ///////////////// Rose //////////////////

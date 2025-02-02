@@ -11,11 +11,28 @@ h2.innerHTML = "Minigames";
 gamePageWindow.appendChild(h2);
 
 
+const xpLevelWrapper = document.createElement('section');
+xpLevelWrapper.id = "xp-level-wrapper";
+gamePageWindow.appendChild(xpLevelWrapper);
+
+const xpLevel = document.createElement('p');
+xpLevel.id = "xp-level";
+xpLevel.innerHTML = "0";
+xpLevelWrapper.appendChild(xpLevel);
+
+const xpBarWrapper = document.createElement('section');
+xpBarWrapper.id = "xp-bar-wrapper";
+gamePageWindow.appendChild(xpBarWrapper);
+
+const xpBar = document.createElement('img');
+xpBar.src = "../../public/images/items/xp_levels_black.png";
+xpBar.id = "xp-bar";
+xpBarWrapper.appendChild(xpBar);
+
+
 const gameWrappers = document.createElement('section');
 gameWrappers.id = "game-wrappers";
 gamePageWindow.appendChild(gameWrappers);
-
-
 
 function createDivs(containerId: string, count: number) {
     const container = document.getElementById(containerId) as HTMLElement;
@@ -28,8 +45,6 @@ function createDivs(containerId: string, count: number) {
   }
 
   createDivs('game-wrappers', 9);
-
-
 
   export const blackBlock = document.createElement('div');
   blackBlock.id = "black-block";
