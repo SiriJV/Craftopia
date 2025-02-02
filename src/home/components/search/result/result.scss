@@ -1,33 +1,35 @@
 @use '../../../../styles/mixins.scss';
 
 #minecraft-panel-two {
-    overflow-y: scroll;
-    overflow-x: hidden;
-
     h2 {
         color: #2a2a2a;
         margin-bottom: 10px;
       }
 
-    img {
-        width: 100px;
-        height: auto;
-        padding: 10px;
-        @include mixins.inset-border();
-        image-rendering: pixelated;
+    section {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 15px;
+
+        img {
+            width: 100px;
+            height: auto;
+            image-rendering: pixelated;
+        }
+    
+        p {
+            margin: 15px;
+            margin-left: 0;
+            @include mixins.body-text();
+        }
+    
+        a {
+            @include mixins.body-text();
+            color: #0000AA;
+            text-decoration: underline;
+          }
     }
 
-    p {
-        margin: 15px;
-        margin-left: 0;
-        @include mixins.body-text();
-    }
-
-    a {
-        @include mixins.body-text();
-        color: #0000AA;
-        text-decoration: underline;
-      }
 }
 
 // ::-webkit-scrollbar {

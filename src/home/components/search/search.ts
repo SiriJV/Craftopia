@@ -27,7 +27,7 @@ export function performSearch<T extends SearchableItem>(
 ) {
   const searchInput = document.getElementById("search-input") as HTMLInputElement;
   const resultsContainer = document.getElementById("results-container") as HTMLElement;
-  const resultsBox = document.getElementById("minecraft-panel-two") as HTMLElement;
+  const resultsBox = document.getElementById("info-wrapper") as HTMLElement;
 
   searchInput.addEventListener("input", async () => {
     const query = searchInput.value.toLowerCase();
