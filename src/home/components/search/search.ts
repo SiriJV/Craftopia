@@ -35,9 +35,12 @@ export function performSearch<T extends SearchableItem>(
 
     const craftingRecipes = await fetchCraftingRecipes();
 
-    const filteredResults = data.filter((item) =>
+    let filteredResults = data.filter((item) =>
       item.name.toLowerCase().includes(query)
     );
+
+    resultsContainer.innerHTML = "";
+    console.log(filteredResults);
     
     if (filteredResults.length === 0) {
       resultsContainer.innerHTML = "<p>No search results found.</p>";
@@ -70,3 +73,11 @@ export function performSearch<T extends SearchableItem>(
     }
   });
 }
+
+
+// <article>
+// <h2>${item.name} Crafting Recipe</h2>
+// <p>Quantity: ${item.quantity}</p>
+// <p>Shapeless: ${item.shapeless}</p>
+// <
+// </article>

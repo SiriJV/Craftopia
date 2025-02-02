@@ -9,6 +9,8 @@ import { renderItem } from "../data/items";
 import { renderBlock } from "../data/blocks";
 import { renderBiome } from "../data/biomes";
 import { renderMob } from "../data/mobs";
+import { removeLastLetter } from "../../../../helpers/helpers";
+import { lowercaseFirstLetter } from "../../../../helpers/helpers";
 
 const options = [
     { src: "https://minecraft-api.vercel.app/images/items/grass_block.png", alt: "Blocks" },
@@ -41,7 +43,8 @@ dropdown.querySelector('.dropdown-selected')!.addEventListener('click', () => {
 
 const optionsList = dropdown.querySelector('.dropdown-options') as HTMLElement;
 
-export let selectedCategory = "Blocks";
+let selectedCategory = "Blocks";
+performSearch(await fetchBlocks(), renderBlock, "minecraft-panel-two");
 
 optionsList.addEventListener('click', async (e) => {
   const target = e.target as HTMLImageElement;
@@ -56,7 +59,10 @@ optionsList.addEventListener('click', async (e) => {
     const h2 = document.getElementById('search-category-h2') as HTMLElement;
     h2.innerHTML = target.alt;
     const searchInput = document.getElementById('search-input') as HTMLInputElement;
-    searchInput.placeholder = `Search for any ${target.alt}`;
+    searchInput.placeholder = `Search for any ${removeLastLetter(lowercaseFirstLetter(target.alt))}...`;
+
+    searchInput.value = "";
+    resultsContainer.innerHTML = "";
 
     switch (selectedCategory) {
       case "Items":
@@ -72,14 +78,56 @@ optionsList.addEventListener('click', async (e) => {
         performSearch(mobs, renderMob, "minecraft-panel-two");
         break;
     }
+
     console.log(selectedCategory);
-    searchInput.value = "";
-    resultsContainer.innerHTML = "";
   }
 });
 
+
+
+      // case "Biomes":
+      //   if (category === selectedCategory) {
+      //     performSearch(biomes, renderBiome, "minecraft-panel-two");
+      //   }
+      //   break;
+
+      // case "Mobs":
+      //   if (category === selectedCategory) {
+      //     performSearch(mobs, renderMob, "minecraft-panel-two");
+      //   }
+   
+
+
+
 optionsList.style.display = 'none';
 populateDropdown();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const searchInput = document.getElementById('search-input') as HTMLInputElement;
 const resultsContainer = document.getElementById('results-container') as HTMLElement;

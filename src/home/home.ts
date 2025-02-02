@@ -1,16 +1,6 @@
-function randomizeTextColors() {
-    const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FFC300", "#DAF7A6"];
-    const elements = document.querySelectorAll<HTMLElement>(".color-change");
-  
-    setInterval(() => {
-      elements.forEach(element => {
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        element.style.color = randomColor;
-      });
-    }, 1000);
-  }
-  
-  randomizeTextColors();
+import './home.scss';
+
+
   
 
 

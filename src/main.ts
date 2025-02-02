@@ -9,5 +9,6 @@ import '../src/home/components/search/data/items';
 import '../src/home/components/search/search';
 import './helpers/helpers';
 import '../src/home/components/torch/torch';
+import '../src/home/components/nav/nav';
 
 // defineConfig();

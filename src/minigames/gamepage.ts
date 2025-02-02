@@ -27,16 +27,13 @@ function createDivs(containerId: string, count: number) {
     }
   }
 
-  createDivs('game-wrappers', 65);
+  createDivs('game-wrappers', 9);
 
 
 
-  const blackBlock = document.createElement('div');
+  export const blackBlock = document.createElement('div');
   blackBlock.id = "black-block";
   body?.appendChild(blackBlock);
-
-
-
 
   const chest = document.getElementById('chest') as HTMLElement;
   const chestImg = document.getElementById('chest-closed') as HTMLImageElement;

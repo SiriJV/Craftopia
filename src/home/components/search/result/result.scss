@@ -1,6 +1,14 @@
 @use '../../../../styles/mixins.scss';
 
 #minecraft-panel-two {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    h2 {
+        color: #2a2a2a;
+        margin-bottom: 10px;
+      }
+
     img {
         width: 100px;
         height: auto;
@@ -17,7 +25,22 @@
 
     a {
         @include mixins.body-text();
-        color: #00AA00;
+        color: #0000AA;
         text-decoration: underline;
       }
 }
+
+// ::-webkit-scrollbar {
+//     width: 20px;
+//     background-color: #C6C6C6;
+//   }
+  
+//   ::-webkit-scrollbar-thumb {
+//     @include mixins.outset-border();
+//     outline: 0;
+//   }
+  
+//   ::-webkit-scrollbar-track {
+//     background-color: #C6C6C6;
+//     outline: 0;
+//   }

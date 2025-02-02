@@ -10,6 +10,11 @@ li {
     outline: 0;
     // margin: 10px;
     padding-left: 15px;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #8B8B8B;
 }
 
 ul {

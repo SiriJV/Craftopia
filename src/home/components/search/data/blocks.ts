@@ -6,9 +6,9 @@ export async function fetchBlocks() {
 }
 
 export const renderBlock: (block: Block) => string = (block) => `
-  <h3>${block.name}</h3>
+  <h2>${block.name}</h2>
   <img src="${block.image}" alt="${block.name}">
-  <p>Description: ${block.description}</p>
+  <p>${block.description}</p>
   <p>NamespacedId: ${block.namespacedId}</p>
   <p>Transparent: ${block.transparent ? "Yes" : "No"}</p>
   <p>Luminence: ${block.luminance}</p>

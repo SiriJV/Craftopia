@@ -2,7 +2,7 @@
 
 hero {
     // background-color: pink;
-    margin: 10px;
+    margin: 15px;
     position: absolute;
     top: 0;
 
@@ -12,13 +12,7 @@ hero {
 
     p {
     @include mixins.body-text();
-    color: yellow;
-    }
-
-    a {
-    @include mixins.body-text();
-    color: blueviolet; 
-    text-decoration: underline;
+    color: #ADADAD;
     }
 }
 
