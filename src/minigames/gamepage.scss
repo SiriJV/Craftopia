@@ -83,6 +83,8 @@
 
 section {
     .game-wrapper {
+        position: relative;
+
         img {
             width: 42px;
             height: 42px;
@@ -99,8 +101,8 @@ section {
             border: 2px solid #260659;
             white-space: nowrap;
             @include mixins.body-text();
-            bottom: 60px;
-            left: 80px;
+            bottom: 30px;
+            left: 40px;
             z-index: 1;
             box-shadow: 
             0 2px 0 rgba(0, 0, 0, 1),
