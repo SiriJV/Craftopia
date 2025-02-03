@@ -9,7 +9,6 @@ export function removeLastLetter(text: string): string {
 export function randomizeTextColors() {
     const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A1", "#FFC300", "#DAF7A6"];
     const elements = document.querySelectorAll<HTMLElement>(".color-change");
-    console.log(elements.length);
     
     setInterval(() => {
       elements.forEach(element => {

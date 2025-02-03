@@ -95,7 +95,6 @@ nav {
             @include mixins.inset-border();
             box-sizing: content-box;
             padding: 2px;
-            transition: background-color 0.3s ease;
         }
             
         img:hover {

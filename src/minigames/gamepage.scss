@@ -29,7 +29,7 @@
         justify-content: center;
 
         p {
-            color: root.$green;
+            color: root.$dark-green;
             @include mixins.heading-text;
             text-shadow: 2px 2px black;
         }
@@ -77,4 +77,65 @@
     top: 0%;
     left: 0%;
     display: none;
+}
+
+
+
+section {
+    .game-wrapper {
+        img {
+            width: 42px;
+            height: 42px;
+            image-rendering: pixelated;
+        }
+
+
+        p {
+            display: none;
+            position: absolute;
+            background-color: black;
+            padding: 4px 8px;
+            color: white;
+            border: 2px solid #260659;
+            white-space: nowrap;
+            @include mixins.body-text();
+            bottom: 60px;
+            left: 80px;
+            z-index: 1;
+            box-shadow: 
+            0 2px 0 rgba(0, 0, 0, 1),
+            0 -2px 0 rgba(0, 0, 0, 1),
+            2px 0 0 rgba(0, 0, 0, 1),
+            -2px 0 0 rgba(0, 0, 0, 1);
+        }
+
+        span {
+            color: #FBFB54;
+        }
+    }
+}
+
+
+#game-wrapper-2:hover #enderman-evasion-description {
+    display: block;
+}
+
+#game-wrapper-3:hover #biome-blunder-description {
+    display: block;
+}
+
+#game-wrapper-4:hover #recipe-roulette-description {
+    display: block;
+}
+
+#game-wrapper-5:hover #mining-memory-description {
+    display: block;
+}
+
+#game-wrapper-6:hover #diamond-dig-description {
+    display: block;
+}
+
+.game-wrapper:hover {
+    background-color: #C6C6C6;
 }

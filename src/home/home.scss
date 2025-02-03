@@ -16,18 +16,25 @@ hero {
     }
 }
 
-#pig-body {
+#pig-wrapper {
     position: absolute;
     bottom: 0;
     left: 500px;
-    width: 120px;
-    height: auto;
+    display: flex;
+    justify-items: center;
+    
+    #pig-body {
+        width: 120px;
+        height: 180px;
+    }
+    
+    #pig-head {
+        width: 100px;
+        height: 100px;
+        image-rendering: pixelated;
+        position: relative;
+        bottom: 30px;
+        right: 50%;
+    }
 }
 
-#pig-head {
-    position: absolute;
-    bottom: 0;
-    left: 500px;
-    width: 50px;
-    height: 50px;
-}

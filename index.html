@@ -8,37 +8,43 @@
     <title>Craftopia</title>
   </head>
   <body>
+    <!--////////////////////// Nav buttons //////////////////////-->
+    <nav>
+      <button id="info-button"><img src="https://minecraft-api.vercel.app/images/items/compass.gif"></button>
+      <button id="jukebox-button"><img src="https://minecraft-api.vercel.app/images/items/jukebox.png"></button>
+    </nav>
     <main>
       <article id="dropdown-searchbox-wrapper">
-    <!--Search categories-->
-    <section class="custom-dropdown">
-      <button class="dropdown-selected">
-        <img src="https://minecraft-api.vercel.app/images/items/grass_block.png" alt="Blocks">
-        <p>></p>
-      </button>
-      <ul class="dropdown-options"></ul>
-    </section>
-
-    <!--Search box-->
-    <article id="search-box">
-      <h2>Search <span id="search-category-h2">Blocks</span></h2>
-      <section>
-      <input id="search-input" placeholder="Search for any block..."></input>
-      <ul id="results-container"></ul>
-      </section>
-    </article>
-  </article>
-
-    <!--Search results-->
-    <article id="minecraft-panel-two">
-      <h2 id="info-h2">Acacia Boat</h2>
-      <section id="info-wrapper">
-        <p>Search to see something here</p>
-      </section>
-    </article>
-  </main>
-
-    <!--Sign w/ contact info-->
+        <!--////////////////////// Search dropdown //////////////////////-->
+        <section class="custom-dropdown">
+          <button class="dropdown-selected">
+            <img src="https://minecraft-api.vercel.app/images/items/grass_block.png" alt="Blocks">
+            <p>></p>
+          </button>
+          <ul class="dropdown-options"></ul>
+        </section>
+        <!--////////////////////// Search box //////////////////////-->
+        <article id="search-box">
+          <h2>Search <span id="search-category-h2">Blocks</span></h2>
+          <section>
+            <input id="search-input" placeholder="Search for any block..."></input>
+            <ul id="results-container"></ul>
+          </section>
+        </article>
+      </article>
+      <!--////////////////////// Search results //////////////////////-->
+      <article id="minecraft-panel-two">
+        <h2 id="info-h2">Acacia Boat</h2>
+        <section id="info-wrapper">
+          <p>Search to see something here</p>
+        </section>
+      </article>
+    </main>
+    <!--////////////////////// Chest //////////////////////-->
+    <aside id="chest">
+      <img id="chest-closed" src="./public/images/items/chest.png">
+    </aside>
+    <!--////////////////////// Footer sign //////////////////////-->
     <aside id="sign-wrapper">
       <img src="./public/images/items/oak_sign_straight.webp" id="sign">
       <p id="contact" >Contact:</p>
@@ -50,9 +56,6 @@
       <img src="./public/images/items/rose_bush.webp">
     </aside>
 
-    <aside id="chest">
-      <img id="chest-closed" src="./public/images/items/chest.png">
-    </aside>
     
     <aside id="lantern">
       <img id="lantern-lit" src="./public/images/items/lantern-lit.png">
@@ -72,15 +75,11 @@
       <p>Click the chest to explore minigames.</p>
     </hero>
 
-    <nav>
-      <button id="info-button"><img src="https://minecraft-api.vercel.app/images/items/compass.gif"></button>
-      <button id="jukebox-button"><img src="https://minecraft-api.vercel.app/images/items/jukebox.png"></button>
-    </nav>
 
-    <!-- <aside>
+    <aside id="pig-wrapper">
       <img id="pig-body" src="./public/images/items/pig_body.png">
       <img id="pig-head">
-    </aside> -->
+    </aside>
 
     <!-- <aside id="nether-portal-gif">
       <img src="./public/images/items/nether_portal_gif.gif">

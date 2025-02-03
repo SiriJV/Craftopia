@@ -65,18 +65,21 @@ main {
     width: auto;
     height: 90%;
     @include mixins.inset-border();
+    background-image: url(../public/images/textures/dirt_texture_dark_2.jpg);
+    background-size: 50%;
 
     input {
-      background-color: #8B8B8B;
+      background: none;
       border: none;
       padding: 10px;
       width: 100%;
       outline: none;
       @include mixins.body-text();
+      color: white;
     }
 
     ::placeholder {
-      color: #373737;
+      color: white;
     }
 
     ul {
@@ -103,6 +106,9 @@ main {
     width: auto;
     height: 90%;
     @include mixins.inset-border();
+    color: white;
+    background-image: url(../public/images/textures/dirt_texture_dark_2.jpg);
+    background-size: 50%;
   }
 }
 

@@ -10,5 +10,6 @@ import '../src/home/components/search/search';
 import './helpers/helpers';
 import '../src/home/components/torch/torch';
 import '../src/home/components/nav/nav';
+import '../src/minigames/biome-blunder/biome-blunder';
 
 // defineConfig();
