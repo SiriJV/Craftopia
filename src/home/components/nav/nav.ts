@@ -117,9 +117,22 @@ const renderJukeboxWindow = (): void => {
     <article>
         <button id="playButton">Play</button>
         <input type="range" id="audioSlider" min="0" max="100" value="0" step="1">
-        <audio id="audio" src="../../../../../public/music/Otherside.ogg"></audio>
+        <audio id="audio" src="../../../../../public/music/otherside.mp3"></audio>
     </article>
     `;
+    const playButton = document.getElementById('playButton') as HTMLButtonElement;
+    const audio = document.getElementById('audio') as HTMLAudioElement;
+
+    playButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.currentTime = 0;
+            audio.play();
+            playButton.innerHTML = 'Pause';
+        } else {
+            audio.pause();
+            playButton.innerHTML = 'Play';
+        }
+    });
 }
 
 jukeboxButton.addEventListener('click', async (e) => {
@@ -132,36 +145,3 @@ jukeboxButton.addEventListener('click', async (e) => {
         jukeboxWindow.style.display = "none";
     }
 });
-
-
-
-///////////////////////////////////////
-/////////// Jukebox Player ////////////
-///////////////////////////////////////
-
-const playButton = document.getElementById('playButton') as HTMLButtonElement;
-const audio = document.getElementById('audio') as HTMLAudioElement;
-const audioSlider = document.getElementById('audioSlider') as HTMLInputElement;
-
-playButton.addEventListener('click', () => {
-    if (audio.paused) {
-        audio.play();
-        playButton.innerHTML = 'Pause';
-    } else {
-        audio.pause();
-        playButton.innerHTML = 'Play';
-    }
-});
-
-audio.addEventListener('timeupdate', () => {
-    if (audio.duration > 0) { 
-        const progress = (audio.currentTime / audio.duration) * 100;
-        audioSlider.value = progress.toString();
-    }
-});
-
-audioSlider.addEventListener('input', () => {
-    const newTime = (parseFloat(audioSlider.value) / 100) * (audio.duration as number);
-    audio.currentTime = newTime;
-});
-
