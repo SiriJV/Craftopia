@@ -1,5 +1,8 @@
 import './search.scss';
 import { displayContent } from './result/result';
+import { showLoadingPortal } from '../loading-portal/loading-portal';
+import { hideLoadingPortal } from '../loading-portal/loading-portal';
+
 
 
 type CraftingRecipe = {
@@ -33,14 +36,18 @@ export function performSearch<T extends SearchableItem>(
     const query = searchInput.value.toLowerCase();
     resultsContainer.innerHTML = "";
 
-    const craftingRecipes = await fetchCraftingRecipes();
+    showLoadingPortal('results-container');
 
+    const craftingRecipes = await fetchCraftingRecipes();
+    
     let filteredResults = data.filter((item) =>
       item.name.toLowerCase().includes(query)
-    );
+
+  );
+    hideLoadingPortal();
+  
 
     resultsContainer.innerHTML = "";
-    console.log(filteredResults);
     
     if (filteredResults.length === 0) {
       resultsContainer.innerHTML = "<p>No search results found.</p>";

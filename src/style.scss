@@ -75,11 +75,13 @@ main {
       width: 100%;
       outline: none;
       @include mixins.body-text();
-      color: white;
+      @include mixins.outset-border();
+      color: #2a2a2a;
+      outline: 0;
     }
 
     ::placeholder {
-      color: white;
+      color: #2a2a2a;
     }
 
     ul {
@@ -126,19 +128,6 @@ main {
 
   img {
     width: 200px;
-    image-rendering: pixelated;
-  }
-}
-
-#nether-portal-gif {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  img {
-    width: 300px;
-    height: 300px;
     image-rendering: pixelated;
   }
 }

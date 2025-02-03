@@ -1,9 +1,11 @@
 @use '../../../styles/mixins.scss';
+@use '../../../styles/root.scss';
 
 li {
     list-style: none;
-    @include mixins.outset-border();
+    // @include mixins.outset-border();
     @include mixins.body-text();
+    color: white;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -14,11 +16,12 @@ li {
 }
 
 li:hover {
-  background-color: #8B8B8B;
+  // background-color: #8B8B8B;
+  color: root.$material-gold;
 }
 
 ul {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
@@ -31,6 +34,7 @@ ul {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #8B8B8B;
+  // background-color: #8B8B8B;
+  background: none;
   outline: 0;
 }

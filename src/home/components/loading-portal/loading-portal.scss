@@ -1,0 +1,15 @@
+// #loading-gif {
+//     width: 100%;
+//     height: 100%;
+//     background-image: url(../../../../public/images/items/nether_portal_gif.gif);
+//     image-rendering: pixelated;
+// }
+
+#loading-portal {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../../public/images/items/nether_portal_gif.gif);
+    background-size: contain;
+    image-rendering: pixelated;
+    border: none;
+}
