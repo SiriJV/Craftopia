@@ -9,6 +9,7 @@ import './home/components/main/searchables/items';
 import '../src/home/components/main/search/search';
 import './helpers/helpers';
 import '../src/home/components/torch/torch';
-import '../src/home/components/nav/nav';
+import './home/components/header/nav/nav';
 import '../src/home/components/loading-portal/loading-portal';
 import '../src/home/components/portrait/portrait';
+import '../src/home/components/header/hero/hero';

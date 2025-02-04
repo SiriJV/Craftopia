@@ -1,7 +1,7 @@
 import './nav.scss';
-import '../../../home/home.scss';
-import { blackBlock } from '../../../minigames/gamepage';
-import { uppercaseFirstLetter } from '../../../helpers/helpers';
+import '../../../../styles/mixins.scss';
+import { blackBlock } from '../../../../minigames/gamepage';
+import { uppercaseFirstLetter } from '../../../../helpers/helpers';
 
 
 ///////////////////////////////////////
@@ -25,7 +25,6 @@ const renderInfoWindow = (): void => {
     suggest features, or submit pull requests. Contributions are welcome and appreciated!</p>
     `;
 }
-// randomizeTextColors();
 
 infoButton.addEventListener('click', async (e) => {
     renderInfoWindow();

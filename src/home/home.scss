@@ -1,13 +1,2 @@
 @use '../styles/mixins.scss';
 @use '../styles/root.scss';
-
-hero {
-    margin: 15px;
-    position: absolute;
-    top: 0;
-
-    h2 {
-    @include mixins.heading-text();
-    font-size: 15px;
-    }
-}

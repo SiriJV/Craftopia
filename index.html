@@ -9,13 +9,22 @@
   </head>
   <body>
     <!--////////////////////// Nav buttons //////////////////////-->
-    <nav>
-      <button id="info-button"><img src="https://minecraft-api.vercel.app/images/items/compass.gif"></button>
-      <button id="jukebox-button"><img src="https://minecraft-api.vercel.app/images/items/jukebox.png"></button>
-    </nav>
-    <hero>
-      <h2 class="color-change">Welcome to Craftopia!</h2>
-    </hero>
+    <header>
+      <hero>
+        <h2 class="color-change" id="welcome-text">Welcome to Craftopia!</h2>
+        <figure id="portrait">
+          <div id="portrait-images-wrapper">
+            <img id="item-frame" src="./public/images/items/item-frame.png">
+            <img id="portrait-head">
+          </div>
+          <p id="portrait-username"><span id="add-portrait-button">Click here</span> to add your portrait!<br>Level: 0</p>
+        </figure>
+      </hero>
+      <nav>
+        <button id="info-button"><img src="https://minecraft-api.vercel.app/images/items/compass.gif"></button>
+        <button id="jukebox-button"><img src="https://minecraft-api.vercel.app/images/items/jukebox.png"></button>
+      </nav>
+    </header>
     <main>
       <article id="dropdown-searchbox-wrapper">
         <!--////////////////////// Search dropdown //////////////////////-->
@@ -44,6 +53,7 @@
     </main>
     <!--////////////////////// Chest //////////////////////-->
     <aside id="chest">
+      <p id="minigames-text">Minigames</p>
       <img id="chest-closed" src="./public/images/items/chest.png">
     </aside>
     <!--////////////////////// Footer sign //////////////////////-->
@@ -58,13 +68,17 @@
       <img src="./public/images/items/rose_bush.webp">
     </aside>
 
-    <figure id="portrait">
-      <div portrait-images-wrapper>
+    <aside id="lilac-flower">
+      <img src="./public/images/items/lilac_flower.webp">
+    </aside>
+
+    <!-- <figure id="portrait">
+      <div id="portrait-images-wrapper">
         <img id="item-frame" src="./public/images/items/item-frame.png">
         <img id="portrait-head">
       </div>
       <p id="portrait-username"><span id="add-portrait-button">Click here</span> to add your portrait!<br>Level: 0</p>
-    </figure>
+    </figure> -->
 
     
     <aside id="lantern">
