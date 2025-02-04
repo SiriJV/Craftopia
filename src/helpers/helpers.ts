@@ -2,6 +2,10 @@ export const lowercaseFirstLetter = (str: string): string => {
     return str.charAt(0).toLowerCase() + str.slice(1);
 }
 
+export const uppercaseFirstLetter = (str: string): string => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 export function removeLastLetter(text: string): string {
     return text.slice(0, -1);
 }
@@ -21,6 +25,3 @@ export function randomizeTextColors() {
   document.addEventListener("DOMContentLoaded", () => {
     randomizeTextColors();
   });
-  
-    
-//   randomizeTextColors();

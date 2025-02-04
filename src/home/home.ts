@@ -1,43 +1,5 @@
 import './home.scss';
 
-// async function fetchHeadImage() {
-//     const response = await fetch("/api/skins/TechnoBlade/head/0.0/0/10/json");
-//     const data = await response.json();
-//     return data.head;
-// }
-
-// async function setHeadImage() {
-//     const imageUrl = await fetchHeadImage();
-//     if (imageUrl) {
-//         const pigHead = document.getElementById("pig-head") as HTMLImageElement;
-//         pigHead.src = "data:image/jpeg;base64, " + imageUrl;
-//     }
-// }
-
-// setHeadImage();
-
-
-// const inputWrapper = document.getElementById('username');
-// const inputUsernameTitle = document.createElement('p');
-// inputUsernameTitle.innerHTML = "Enter an existing minecraft username:"
-// inputWrapper?.appendChild(inputUsernameTitle);
-
-// const inputUsername = document.createElement('input');
-// inputUsername.type = "text";
-// inputUsername.id = "input-username";
-// inputUsername.placeholder = "johndoe...";
-// inputWrapper?.appendChild(inputUsername);
-
-// const inputUsernameAlert = document.createElement('div');
-// inputUsernameAlert.innerHTML = "Username not found. Please try again!";
-// inputUsernameAlert.style.display = "none";
-// inputWrapper?.appendChild(inputUsernameAlert);
-
-// const inputUsernameButton = document.createElement('button');
-// inputUsernameButton.id = "input-username-button";
-// inputUsernameButton.innerHTML = "Submit";
-// inputWrapper?.appendChild(inputUsernameButton);
-
 async function fetchRotatedHeadImage(username: string) {
     const response = await fetch(`/api/skins/${username}/head/-35.0/-45/10/json`);
     const data = await response.json();
@@ -110,11 +72,3 @@ async function setHeadImage() {
         alert.style.display = "block";
     }
 }
-
-// const username = "TechnoBlade";
-// const imageUrl = await fetchHeadImage(username);
-
-// const pigHead = document.getElementById('pig-head') as HTMLImageElement;
-// pigHead.src = "data:image/jpeg;base64," + imageUrl;
-
-// pigHead.addEventListener("click", renderUsernameWindow);

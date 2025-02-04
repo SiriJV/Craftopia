@@ -130,7 +130,6 @@ nav {
     @include mixins.outset-border();
     outline: 0;
     padding: 5px;
-    margin-top: 15px;
     cursor: pointer;
     @include mixins.body-text();
     transition: background-color 0.3s ease;

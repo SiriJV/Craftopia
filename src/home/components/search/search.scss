@@ -21,6 +21,13 @@
     background-image: url(../public/images/textures/dirt_texture_dark_2.jpg);
     background-size: 30%;
 
+    #no-results {
+      color: white;
+      @include mixins.body-text;
+      padding: 10px;
+      padding-left: 15px;
+    }
+
     input {
       background: none;
       border: none;
@@ -62,11 +69,6 @@
     }
   }
 }
-
-
-// ul {
-//     overflow-y: auto;
-// }
 
 ::-webkit-scrollbar {
   width: 20px;

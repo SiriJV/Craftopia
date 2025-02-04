@@ -1,14 +1,14 @@
 import './dropdown.scss';
 
-import { fetchItems } from "../data/items";
-import { fetchBlocks } from "../data/blocks";
-import { biomes } from "../data/biomes";
-import { mobs } from "../data/mobs";
+import { fetchItems } from "../searchables/items";
+import { fetchBlocks } from "../searchables/blocks";
+import { biomes } from "../searchables/biomes";
+import { mobs } from "../searchables/mobs";
 import { performSearch } from "../search";
-import { renderItem } from "../data/items"; 
-import { renderBlock } from "../data/blocks";
-import { renderBiome } from "../data/biomes";
-import { renderMob } from "../data/mobs";
+import { renderItem } from "../searchables/items"; 
+import { renderBlock } from "../searchables/blocks";
+import { renderBiome } from "../searchables/biomes";
+import { renderMob } from "../searchables/mobs";
 import { removeLastLetter } from "../../../../helpers/helpers";
 import { lowercaseFirstLetter } from "../../../../helpers/helpers";
 

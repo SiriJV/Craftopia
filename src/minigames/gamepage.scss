@@ -33,7 +33,6 @@
             @include mixins.heading-text;
             text-shadow: 2px 2px black;
         }
-
     }
 }
 
@@ -79,8 +78,6 @@
     display: none;
 }
 
-
-
 section {
     .game-wrapper {
         position: relative;
@@ -116,7 +113,6 @@ section {
         }
     }
 }
-
 
 #game-wrapper-2:hover #enderman-evasion-description {
     display: block;

@@ -11,7 +11,6 @@ const h2 = document.createElement('h2');
 h2.innerHTML = "Minigames";
 gamePageWindow.appendChild(h2);
 
-
 const xpLevelWrapper = document.createElement('section');
 xpLevelWrapper.id = "xp-level-wrapper";
 gamePageWindow.appendChild(xpLevelWrapper);
@@ -36,17 +35,17 @@ gameWrappers.id = "game-wrappers";
 gamePageWindow.appendChild(gameWrappers);
 
 function createDivs(containerId: string, count: number) {
-    const container = document.getElementById(containerId) as HTMLElement;
+  const container = document.getElementById(containerId) as HTMLElement;
   
-    for (let i = 0; i < count; i++) {
-      const newDiv = document.createElement('div');
-      newDiv.classList.add('game-wrapper');
-      newDiv.id = `game-wrapper-${i}`;
-      container.appendChild(newDiv);
-    }
+  for (let i = 0; i < count; i++) {
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('game-wrapper');
+    newDiv.id = `game-wrapper-${i}`;
+    container.appendChild(newDiv);
   }
+}
 
-  createDivs('game-wrappers', 9);
+createDivs('game-wrappers', 9);
 
 export function createGameDisplay(wrapperId: string, game: { name: string; icon: string; description: string }) {
   const wrapperElement = document.getElementById(wrapperId) as HTMLElement;
@@ -63,12 +62,10 @@ export function createGameDisplay(wrapperId: string, game: { name: string; icon:
   wrapperElement.appendChild(gameDescription);
 }
 
-
 games.forEach((game, index) => {
   const wrapperId = `game-wrapper-${index + 2}`;
   createGameDisplay(wrapperId, game);
 });
-
 
 export const blackBlock = document.createElement('div');
 blackBlock.id = "black-block";

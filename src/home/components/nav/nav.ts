@@ -1,6 +1,7 @@
 import './nav.scss';
 import '../../../home/home.scss';
 import { blackBlock } from '../../../minigames/gamepage';
+import { uppercaseFirstLetter } from '../../../helpers/helpers';
 
 
 ///////////////////////////////////////
@@ -116,8 +117,8 @@ const renderJukeboxWindow = (): void => {
         </div>
         </section>
         <article>
+        <p id="chosen-disc-name"></p>
         <button id="playButton">Play</button>
-        <input type="range" id="audioSlider" min="0" max="100" value="0" step="1">
         <audio id="audio" src="../../../../../public/music/otherside.mp3"></audio>
         </article>
         `;
@@ -138,6 +139,8 @@ const renderJukeboxWindow = (): void => {
         discs.forEach(discName => {
             const discContainer = document.getElementById(discName) as HTMLElement;
             discContainer.addEventListener('click', () => {
+                const chosenDisc = document.getElementById('chosen-disc-name') as HTMLElement;
+                chosenDisc.innerHTML = `${uppercaseFirstLetter(discName)}`;
                 audio.src = `../../../../../public/music/${discName}.mp3`;
         });
     });

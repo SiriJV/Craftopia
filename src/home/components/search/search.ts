@@ -1,9 +1,7 @@
 import './search.scss';
 import { displayContent } from './result/result';
-import { showLoadingPortal } from '../loading-portal/loading-portal';
-import { hideLoadingPortal } from '../loading-portal/loading-portal';
-
-
+// import { showLoadingPortal } from '../loading-portal/loading-portal';
+// import { hideLoadingPortal } from '../loading-portal/loading-portal';
 
 type CraftingRecipe = {
   item: string;
@@ -46,11 +44,10 @@ export function performSearch<T extends SearchableItem>(
   );
     // hideLoadingPortal();
   
-
     resultsContainer.innerHTML = "";
     
     if (filteredResults.length === 0) {
-      resultsContainer.innerHTML = "<p>No search results found.</p>";
+      resultsContainer.innerHTML = "<p id='no-results'>No search results found.</p>";
     } else {
       filteredResults.forEach((item) => {
         const listItem = document.createElement("li");
