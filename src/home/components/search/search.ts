@@ -36,7 +36,7 @@ export function performSearch<T extends SearchableItem>(
     const query = searchInput.value.toLowerCase();
     resultsContainer.innerHTML = "";
 
-    showLoadingPortal('results-container');
+    // showLoadingPortal('results-container');
 
     const craftingRecipes = await fetchCraftingRecipes();
     
@@ -44,7 +44,7 @@ export function performSearch<T extends SearchableItem>(
       item.name.toLowerCase().includes(query)
 
   );
-    hideLoadingPortal();
+    // hideLoadingPortal();
   
 
     resultsContainer.innerHTML = "";
