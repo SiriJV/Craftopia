@@ -1,23 +1,18 @@
 import './home.scss';
 
-async function fetchRotatedHeadImage(username: string) {
-    const response = await fetch(`/api/skins/${username}/head/-35.0/-45/10/json`);
-    const data = await response.json();
-    return data.head;
+async function initializeSteveHead() {
+    const username = "Tubbo";
+    
+    const imageUrl = await fetchHeadImage(username);
+    
+    const steveHead = document.getElementById('portrait-head') as HTMLImageElement;
+    steveHead.src = "data:image/jpeg;base64," + imageUrl;
+
+    const addPortraitButton = document.getElementById('add-portrait-button') as HTMLElement;
+    addPortraitButton.addEventListener("click", renderUsernameWindow);
 }
 
-async function initializePigHead() {
-    const username = "TechnoBlade";
-    
-    const imageUrl = await fetchRotatedHeadImage(username);
-    
-    const pigHead = document.getElementById('pig-head') as HTMLImageElement;
-    pigHead.src = "data:image/jpeg;base64," + imageUrl;
-
-    pigHead.addEventListener("click", renderUsernameWindow);
-}
-
-initializePigHead();
+initializeSteveHead();
 
 function renderUsernameWindow() {
     const body = document.querySelector('body');
@@ -61,7 +56,7 @@ async function setHeadImage() {
     if (username) {
         const imageUrl = await fetchHeadImage(username);
         if (imageUrl) {
-            const pigHead = document.getElementById("pig-head") as HTMLImageElement;
+            const pigHead = document.getElementById("portrait-head") as HTMLImageElement;
             pigHead.src = "data:image/jpeg;base64," + imageUrl;
 
             const usernameWindow = document.getElementById('username-window') as HTMLElement;
@@ -71,4 +66,13 @@ async function setHeadImage() {
         const alert = document.getElementById('input-username-alert') as HTMLElement;
         alert.style.display = "block";
     }
+
+    const portraitUsername = document.getElementById('portrait-username') as HTMLElement;
+    portraitUsername.innerHTML = `
+    <p id="portrait-username">
+    <span id="add-portrait-button">${username}</span><br>Level: 0</p>
+    `;
+    
+    const addPortraitButton = document.getElementById('add-portrait-button') as HTMLElement;
+    addPortraitButton.addEventListener("click", renderUsernameWindow);
 }

@@ -67,7 +67,99 @@ main {
 }
 
 
+#portrait {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  display: flex;
+  gap: 10px;
 
+  #portrait-images-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+  
+  #item-frame {
+    width: 52px;
+    height: 52px;
+    image-rendering: pixelated;
+  }
+  
+  #portrait-head {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    image-rendering: pixelated;
+    box-shadow: 2px 2px black;
+  }
+  
+  p {
+    @include mixins.body-text;
+    color: white;
+    background-color: rgba(13, 13, 13, 0.4);
+    height: fit-content;
+    font-size: 10px;
+  }
+
+  span {
+    color: root.$yellow;
+    text-decoration: underline;
+  }
+
+  span:hover {
+    color: root.$material-redstone;
+  }
+}
+
+#username-window {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include mixins.outset-border;
+  display: flex;
+  flex-direction: column;
+
+  p {
+      @include mixins.body-text;
+      margin-bottom: 10px;
+  }
+  
+  input {
+      @include mixins.inset-border;
+      @include mixins.body-text;
+      width: auto;
+      padding: 5px;
+      margin-bottom: 10px;
+      outline: 0;
+  }
+
+  div {
+      @include mixins.body-text;
+      color: root.$material-redstone;
+      margin-bottom: 10px;
+  }
+
+  button {
+      @include mixins.outset-border;
+      @include mixins.body-text;
+      outline: 0;
+      padding: 5px;
+  }
+
+  button:hover {
+      background-color: #8B8B8B;
+  }
+}
 
 
 

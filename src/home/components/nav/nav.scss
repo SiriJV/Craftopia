@@ -1,4 +1,5 @@
 @use '../../../styles/mixins.scss';
+@use '../../../styles/root.scss';
 
 nav {
     position: absolute;
@@ -46,6 +47,10 @@ nav {
         @include mixins.body-text();
         // margin-bottom: 10px;
         padding: 10px 0px;
+    }
+
+    a:hover {
+        color: root.$material-redstone;
     }
   }
 

@@ -10,7 +10,5 @@ import '../src/home/components/main/search/search';
 import './helpers/helpers';
 import '../src/home/components/torch/torch';
 import '../src/home/components/nav/nav';
-import '../src/minigames/biome-blunder/biome-blunder';
 import '../src/home/components/loading-portal/loading-portal';
-
-// defineConfig();
+import '../src/home/components/portrait/portrait';

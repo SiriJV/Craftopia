@@ -83,51 +83,8 @@ optionsList.addEventListener('click', async (e) => {
   }
 });
 
-
-
-      // case "Biomes":
-      //   if (category === selectedCategory) {
-      //     performSearch(biomes, renderBiome, "minecraft-panel-two");
-      //   }
-      //   break;
-
-      // case "Mobs":
-      //   if (category === selectedCategory) {
-      //     performSearch(mobs, renderMob, "minecraft-panel-two");
-      //   }
-   
-
-
-
 optionsList.style.display = 'none';
 populateDropdown();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const searchInput = document.getElementById('search-input') as HTMLInputElement;
 const resultsContainer = document.getElementById('results-container') as HTMLElement;
