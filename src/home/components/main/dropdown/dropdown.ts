@@ -4,7 +4,7 @@ import { fetchItems } from "../searchables/items";
 import { fetchBlocks } from "../searchables/blocks";
 import { biomes } from "../searchables/biomes";
 import { mobs } from "../searchables/mobs";
-import { performSearch } from "../search";
+import { performSearch } from "../search/search";
 import { renderItem } from "../searchables/items"; 
 import { renderBlock } from "../searchables/blocks";
 import { renderBiome } from "../searchables/biomes";

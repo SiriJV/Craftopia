@@ -1,5 +1,3 @@
-// dimension, category(inte alltid), name, description, screenshot
-
 export const renderBiome = (biome: Biome): string => `
   <img src="${biome.screenshot}" alt="${biome.name}">
   <p>Dimension: ${biome.dimension}</p>

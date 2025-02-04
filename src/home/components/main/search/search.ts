@@ -1,5 +1,5 @@
 import './search.scss';
-import { displayContent } from './result/result';
+import { displayContent } from '../result/result';
 // import { showLoadingPortal } from '../loading-portal/loading-portal';
 // import { hideLoadingPortal } from '../loading-portal/loading-portal';
 
