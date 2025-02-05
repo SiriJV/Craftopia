@@ -13,3 +13,4 @@ import '../src/components/loading-portal/loading-portal';
 import '../src/components/portrait/portrait';
 import '../src/components/header/hero/hero';
 import '../src/components/main/result/result';
+import '../src/minigames/games/enderman-evasion/enderman-evasion';

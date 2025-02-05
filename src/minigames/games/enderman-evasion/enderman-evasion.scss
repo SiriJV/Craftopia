@@ -1,0 +1,51 @@
+@use '../../../styles/mixins.scss';
+
+.game-page {
+    @include mixins.outset-border;
+    padding: 20px;
+    max-width: 500px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        @include mixins.heading-text;
+        margin-bottom: 15px;
+    }
+
+    p {
+        @include mixins.body-text;
+        margin-bottom: 15px;
+    }
+
+    .game-page-buttons {
+        display: flex;
+        
+        button {
+            @include mixins.outset-border;
+            outline: 0;
+            @include mixins.body-text;
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #8B8B8B;
+        }
+
+        .start-button {
+            flex-grow: 3;
+        }
+
+        .exit-button {
+            flex-grow: 1;
+        }
+    }
+}

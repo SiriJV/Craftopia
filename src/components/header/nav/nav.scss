@@ -165,3 +165,72 @@ nav {
         margin-bottom: 10px;
     }
   }
+
+//   favorites.forEach(element => {
+//     const favoriteItem = document.createElement('li') as HTMLElement;
+//     favoriteItem.classList.add('favorite-list-item');
+
+//     favoriteItem.innerHTML = `
+//     <span>${element.name}</span>
+//     <img src="${element.image}">
+//     `;
+//     ul.appendChild(favoriteItem);
+// })
+// }
+
+
+#favorites-window {
+    h2 {
+        color: black;
+    }
+
+    span {
+        @include mixins.body-text;
+        color: black;
+    }
+    
+    #favorites-ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        
+        .favorite-list-item {
+            @include mixins.body-text;
+            list-style: none;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        
+            img {
+                width: 40px;
+                height: auto;
+            }
+        }
+    }   
+}
+
+#remove-favorite-window {
+    @include mixins.outset-border;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+        @include mixins.body-text;
+        margin-bottom: 15px;
+    }
+
+    button {
+        @include mixins.body-text;
+        @include mixins.outset-border;
+        outline: 0;
+        padding: 5px 10px;
+        margin-right: 10px;
+    }
+}
