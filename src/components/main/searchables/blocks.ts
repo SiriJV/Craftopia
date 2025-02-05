@@ -1,4 +1,5 @@
 export const renderBlock: (block: Block) => string = (block) => `
+  <img class="add-favorite-button" src="https://minecraft-api.vercel.app/images/items/nether_star.gif">
   <img src="${block.image}" alt="${block.name}">
   <p>${block.description}</p>
   <p>NamespacedId: ${block.namespacedId}</p>

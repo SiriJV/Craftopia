@@ -53,13 +53,23 @@
           // @include mixins.outset-border();
           @include mixins.body-text();
           color: white;
-          display: flex;
-          align-items: center;
           padding: 10px;
           outline: 0;
           // margin: 10px;
           padding-left: 15px;
           transition: background-color 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          span {
+            width: fit-content;
+          }
+          
+          img {
+            width: 25px;
+            height: 25px;
+          }
       }
       
       li:hover {

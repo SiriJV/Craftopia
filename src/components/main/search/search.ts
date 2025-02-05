@@ -2,6 +2,7 @@ import './search.scss';
 import { displayContent } from '../result/result';
 // import { showLoadingPortal } from '../../loading-portal/loading-portal';
 // import { hideLoadingPortal } from '../../loading-portal/loading-portal';
+import { favorites } from '../../header/nav/nav';
 
 type CraftingRecipe = {
   item: string;
@@ -15,8 +16,9 @@ async function fetchCraftingRecipes(): Promise<CraftingRecipe[]> {
   return await response.json();
 }
 
-type SearchableItem = {
+export type SearchableItem = {
   name: string;
+  image?: string;
 };
 
 type RenderFunction<T> = (data: T) => string;
@@ -71,9 +73,16 @@ export function performSearch<T extends SearchableItem>(
             const recipeLink = document.createElement("a");
             recipeLink.innerHTML = "See crafting recipe";
 
-            console.log(matchingRecipe);
+            // console.log(matchingRecipe);
             resultsBox.appendChild(recipeLink);
           }
+
+          const addFavoriteButton = document.querySelector('.add-favorite-button') as HTMLElement;
+          addFavoriteButton.addEventListener("click", () => {
+            favorites.push(item);
+            console.log(favorites);
+            alert("Added an item to favorites!");
+          });
         });
       });
     }

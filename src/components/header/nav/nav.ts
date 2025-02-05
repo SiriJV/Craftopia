@@ -2,6 +2,7 @@ import './nav.scss';
 import '../../../styles/mixins.scss';
 import { blackBlock } from '../../../minigames/gamepage';
 import { uppercaseFirstLetter } from '../../../helpers/helpers';
+import { SearchableItem } from '../../main/search/search';
 
 
 ///////////////////////////////////////
@@ -161,18 +162,35 @@ jukeboxButton.addEventListener('click', async (e) => {
 
 const favoritesButton = document.getElementById('favorites-button') as HTMLButtonElement;
 
+export const favorites: SearchableItem[] = [];
 
-const renderFavoritesWindow = (): void => {
+export const renderFavoritesWindow = (): void => {
     const element = document.createElement('article') as HTMLElement;
     element.id = "favorites-window";
     const body = document.querySelector('body') as HTMLElement;
     body.appendChild(element);
     element.style.display = "none";
-    
+
     element.innerHTML = `
     <h2>Your favorites:</h2>
-    <ul id="favorites-ul">
+    <ul id="favorites-ul"></ul>
     `;
+
+    const ul = document.getElementById('favorites-ul') as HTMLElement;
+        while (ul.firstChild) {
+            ul.removeChild(ul.firstChild);
+    }
+
+    favorites.forEach(element => {
+        const favoriteItem = document.createElement('li') as HTMLElement;
+        favoriteItem.classList.add('favorite-list-item');
+
+        favoriteItem.innerHTML = `
+        <span>${element.name}</span>
+        <img src="${element.image}">
+        `;
+        ul.appendChild(favoriteItem);
+    })
 }
 
 favoritesButton.addEventListener('click', async (e) => {
