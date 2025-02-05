@@ -1,0 +1,165 @@
+@use '../../../styles/mixins.scss';
+@use '../../../styles/root.scss';
+
+nav {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    display: flex;
+    flex-direction: row-reverse;
+  
+    button {
+      @include mixins.outset-border;
+      padding: 5px;
+      padding-bottom: 0px;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+      z-index: 2;
+      
+      img {
+        image-rendering: pixelated;
+      }
+    }
+  
+    button:hover {
+      background-color: #8B8B8B;
+    }
+  }
+
+  #info-window {
+    max-width: 500px;
+    min-width: 350px;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mixins.outset-border();
+
+    h2 {
+        @include mixins.heading-text();
+        margin-bottom: 10px;
+    }
+
+    p {
+        @include mixins.body-text();
+        // margin-bottom: 10px;
+        padding: 10px 0px;
+    }
+
+    a:hover {
+        color: root.$material-redstone;
+    }
+  }
+
+
+
+
+
+
+#jukebox-window {
+    max-width: 500px;
+    min-width: 310px;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mixins.outset-border();
+
+    h2 {
+        @include mixins.heading-text();
+    }
+
+    p {
+        @include mixins.body-text();
+        padding: 10px 0px;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0px;
+        max-width: auto;
+        height: auto;
+    }
+    
+    .disc-container {
+        position: relative;
+        width: auto;
+        height: 52px;
+    
+        img {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            image-rendering: pixelated;
+            @include mixins.inset-border();
+            box-sizing: content-box;
+            padding: 2px;
+        }
+            
+        img:hover {
+            background-color: #C6C6C6;
+        }
+    
+        .disc-info {
+            display: none;
+            position: absolute;
+            background-color: black;
+            color: #FBFB54;
+            padding: 4px 8px;
+            border: 2px solid #260659;
+            white-space: nowrap;
+            top: 0;
+            left: 70px;
+            z-index: 1;
+            box-shadow: 
+            0 2px 0 rgba(0, 0, 0, 1),
+            0 -2px 0 rgba(0, 0, 0, 1),
+            2px 0 0 rgba(0, 0, 0, 1),
+            -2px 0 0 rgba(0, 0, 0, 1);
+        }
+    }
+    
+    .disc-container:hover .disc-info {
+        display: block;
+    }
+}
+
+
+#playButton {
+    @include mixins.outset-border();
+    outline: 0;
+    padding: 5px;
+    cursor: pointer;
+    @include mixins.body-text();
+    transition: background-color 0.3s ease;
+}
+
+#playButton:hover {
+    background-color: #8B8B8B;
+}
+
+
+
+
+
+#favorites-window {
+    max-width: 500px;
+    min-width: 350px;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mixins.outset-border();
+
+    h2 {
+        @include mixins.heading-text();
+        margin-bottom: 10px;
+    }
+  }

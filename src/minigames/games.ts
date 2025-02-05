@@ -1,7 +1,7 @@
 export const games = [
-    { name: "Enderman Evasion", icon: "https://minecraft-api.vercel.app/images/items/enderman_spawn_egg.png", description: "Avoid looking the Enderman in the eyes!" },
-    { name: "Biome Blunder", icon: "https://minecraft-api.vercel.app/images/items/jungle_sapling.png", description: "Guess the biome!" },
-    { name: "Recipe Roulette", icon: "https://minecraft-api.vercel.app/images/items/crafting_table.png", description: "Guess the crafting recipe!"},
-    { name: "Mining Memory", icon: "https://minecraft-api.vercel.app/images/items/emerald.png", description: "Classic memory!"},
-    { name: "Diamond Dig", icon: "https://minecraft-api.vercel.app/images/items/diamond_pickaxe.png", description: "Find the diamonds and avoid the pufferfish!"}
+    { name: "Enderman Evasion", icon: "https://minecraft-api.vercel.app/images/items/enderman_spawn_egg.png", description: "Avoid looking the Enderman in the eyes!", descriptionlong: ""},
+    { name: "Biome Blunder", icon: "https://minecraft-api.vercel.app/images/items/jungle_sapling.png", description: "Guess the biome!", descriptionlong: ""},
+    { name: "Recipe Roulette", icon: "https://minecraft-api.vercel.app/images/items/crafting_table.png", description: "Guess the crafting recipe!", descriptionlong: ""},
+    { name: "Mining Memory", icon: "https://minecraft-api.vercel.app/images/items/emerald.png", description: "Classic memory!", descriptionlong: ""},
+    { name: "Diamond Dig", icon: "https://minecraft-api.vercel.app/images/items/diamond_pickaxe.png", description: "Find the diamonds and avoid the pufferfish!", descriptionlong: "Enderman Evasion is a quick, reflex-based game where the goal is simple: don't make eye contact with the Enderman. You're placed on a 3x3 grid with the Enderman in the center. You must quickly choose any of the 8 surrounding squares. The Enderman will randomly turn to face one direction, and if you pick the square he's looking at, you lose a life. With only 3 hearts, every move counts. Survive as long as you can, rack up points, and see how well you can evade the Enderman's unsettling gaze."}
   ];

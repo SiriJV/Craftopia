@@ -1,0 +1,47 @@
+@use '../../styles/mixins.scss';
+@use '../../styles/root.scss';
+
+#sign-wrapper {
+    width: auto;
+    height: auto;
+    position: fixed;
+    bottom: -1%;
+    right: 3%;
+  
+    #sign {
+      image-rendering: pixelated;
+      width: 200px;
+      height: auto;
+      position: relative;
+    }
+  
+    #contact {
+      position: absolute;
+      font-size: 14px;
+      font-family: pixel-font;
+      line-height: 0.5;
+      bottom: 92%;
+      right: 31%;
+      @include mixins.body-text();
+    }
+  
+    #e-mail {
+      position: absolute;
+      color: #0000AA;
+      bottom: 74.5%;
+      right: 4%;
+      @include mixins.body-text();
+    }
+  
+    #linkedin {
+      position: absolute;
+      color: #0000AA;
+      bottom: 59%;
+      right: 9%;
+      @include mixins.body-text();
+    }
+    
+    #linkedin:hover, #e-mail:hover {
+      color: root.$material-redstone;
+    }
+}

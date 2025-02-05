@@ -1,0 +1,61 @@
+@use '../../../styles/mixins.scss';
+@use '../../../styles/root.scss';
+
+#minecraft-panel-two {
+    h2 {
+        color: #2a2a2a;
+        margin-bottom: 10px;
+      }
+
+    section {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 15px;
+
+        img {
+            width: 100px;
+            height: auto;
+            image-rendering: pixelated;
+        }
+    
+        p {
+            margin: 15px;
+            margin-left: 0;
+            @include mixins.body-text();
+        }
+    
+        a {
+            @include mixins.body-text();
+            color: root.$material-gold;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: root.$material-amethyst;
+        }
+    }
+}
+
+#minecraft-panel-two {
+    grid-area: middle-right;
+    padding: 20px;
+    width: 350px;
+    height: 450px;
+    line-height: 1.5;
+    @include mixins.outset-border();
+    @include mixins.heading-text();
+  
+    h2 {
+      color: #2a2a2a;
+      margin-bottom: 10px;
+    }
+  
+    section {
+      width: auto;
+      height: 90%;
+      @include mixins.inset-border();
+      color: white;
+      background-image: url(../public/images/textures/dirt_texture_dark_2.jpg);
+      background-size: 30%;
+    }
+  }
