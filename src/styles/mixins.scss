@@ -22,6 +22,13 @@
     border-left-color: #FFFFFF;
     outline: 3px solid black;
   }
+
+  @mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   
   @mixin body-text {
     font-family: pixel-font;
