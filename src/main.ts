@@ -9,7 +9,6 @@ import '../src/components/main/search/search';
 import './helpers/helpers';
 import '../src/components/torch/torch';
 import '../src/components/loading-portal/loading-portal';
-import '../src/components/portrait/portrait';
 import '../src/components/header/hero/hero';
 import '../src/components/main/result/result';
 import '../src/components/header/nav/favorite/favorite';

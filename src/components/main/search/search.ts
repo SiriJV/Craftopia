@@ -1,5 +1,5 @@
 import './search.scss';
-import { displayContent } from '../result/result';
+import { renderSearchables } from '../result/result';
 // import { showLoadingPortal } from '../../loading-portal/loading-portal';
 // import { hideLoadingPortal } from '../../loading-portal/loading-portal';
 import { favorites } from '../../../state/favorites';
@@ -33,25 +33,25 @@ export function performSearch<T extends SearchableItem>(
   const resultsBox = document.getElementById("info-wrapper") as HTMLElement;
 
   searchInput.addEventListener("input", async () => {
-    const query = searchInput.value.toLowerCase();
+    const search = searchInput.value.toLowerCase();
     resultsContainer.innerHTML = "";
 
     // showLoadingPortal('results-container');
 
     const craftingRecipes = await fetchCraftingRecipes();
     
-    let filteredResults = data.filter((item) =>
-      item.name.toLowerCase().includes(query)
+    let results = data.filter((element) =>
+      element.name.toLowerCase().includes(search)
 
   );
     // hideLoadingPortal();
   
     resultsContainer.innerHTML = "";
     
-    if (filteredResults.length === 0) {
+    if (results.length === 0) {
       resultsContainer.innerHTML = "<p id='no-results'>No search results found.</p>";
     } else {
-      filteredResults.forEach((item) => {
+      results.forEach((item) => {
         const listItem = document.createElement("li");
         listItem.classList.add("result-item");
 
@@ -61,34 +61,31 @@ export function performSearch<T extends SearchableItem>(
         resultsContainer.appendChild(listItem);
 
         listItem.addEventListener("click", () => {
-          displayContent(item, render, wrapperId);
+          renderSearchables(item, render, wrapperId);
           const h2 = document.getElementById('info-h2') as HTMLElement;
           h2.innerHTML = `${item.name}`;
 
           const matchingRecipe = craftingRecipes.find(
-            (recipe) => recipe.item.toLowerCase() === item.name.toLowerCase()
+            (element) => element.item.toLowerCase() === item.name.toLowerCase()
           );
           
           if (matchingRecipe) {
             const recipeLink = document.createElement("a");
             recipeLink.innerHTML = "See crafting recipe";
 
-            // console.log(matchingRecipe);
             resultsBox.appendChild(recipeLink);
           }
 
           const addFavoriteButton = document.querySelector('.add-favorite-button') as HTMLElement;
           addFavoriteButton.addEventListener("click", () => {
             favorites.push(item);
-            console.log(favorites);
-            alert("Added an item to favorites!");
+            alert("You added an item to favorites!");
           });
         });
       });
     }
   });
 }
-
 
 // <article>
 // <h2>${item.name} Crafting Recipe</h2>

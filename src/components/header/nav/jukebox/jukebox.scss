@@ -71,7 +71,6 @@
     }
 }
 
-
 #playButton {
     @include mixins.outset-border();
     outline: 0;
@@ -84,7 +83,3 @@
 #playButton:hover {
     background-color: #8B8B8B;
 }
-
-
-
-

@@ -54,10 +54,10 @@ async function setHeadImage() {
     const username = inputUsername.value;
 
     if (username) {
-        const imageUrl = await fetchHeadImage(username);
-        if (imageUrl) {
-            const pigHead = document.getElementById("portrait-head") as HTMLImageElement;
-            pigHead.src = "data:image/jpeg;base64," + imageUrl;
+        const usernameImage = await fetchHeadImage(username);
+        if (usernameImage) {
+            const steveHead = document.getElementById("portrait-head") as HTMLImageElement;
+            steveHead.src = "data:image/jpeg;base64," + usernameImage;
 
             const usernameWindow = document.getElementById('username-window') as HTMLElement;
             usernameWindow.remove();

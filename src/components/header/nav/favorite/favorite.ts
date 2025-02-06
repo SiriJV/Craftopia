@@ -48,7 +48,7 @@ export const renderFavoritesWindow = (): void => {
             removeWindow.appendChild(exitButton);
             exitButton.addEventListener("click", () => {
                 removeWindow.style.display = "none";
-            })
+            });
             
             const removeButton = document.createElement('button') as HTMLButtonElement;
             removeButton.innerHTML = "Yes";
@@ -69,7 +69,7 @@ export const renderFavoritesWindow = (): void => {
     }
 }
 
-favoritesButton.addEventListener('click', async (e) => {
+favoritesButton.addEventListener('click', () => {
     renderFavoritesWindow();
     
     const favoritesWindow = document.getElementById('favorites-window') as HTMLElement;

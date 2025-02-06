@@ -4,11 +4,14 @@ import { fetchItems } from "../searchables/items";
 import { fetchBlocks } from "../searchables/blocks";
 import { biomes } from "../searchables/biomes";
 import { mobs } from "../searchables/mobs";
+
 import { performSearch } from "../search/search";
+
 import { renderItem } from "../searchables/items"; 
 import { renderBlock } from "../searchables/blocks";
 import { renderBiome } from "../searchables/biomes";
 import { renderMob } from "../searchables/mobs";
+
 import { removeLastLetter } from '../../../helpers/helpers';
 import { lowercaseFirstLetter } from '../../../helpers/helpers';
 
@@ -22,7 +25,6 @@ const options = [
 const dropdown = document.querySelector('.custom-dropdown') as HTMLElement;
 const selectedButton = dropdown.querySelector('.dropdown-selected img') as HTMLImageElement;
 
-// populera dropdown
 function populateDropdown() {
   const selectedAlt = selectedButton.alt;
   optionsList.innerHTML = '';
@@ -36,7 +38,6 @@ function populateDropdown() {
   });
 }
 
-// om dropdown syns eller inte
 dropdown.querySelector('.dropdown-selected')!.addEventListener('click', () => {
   optionsList.style.display = optionsList.style.display === 'block' ? 'none' : 'block';
 });
@@ -51,7 +52,9 @@ optionsList.addEventListener('click', async (e) => {
   if (target.tagName === 'IMG') {
     selectedButton.src = target.src;
     selectedButton.alt = target.alt;
+
     populateDropdown();
+
     optionsList.style.display = 'none';
     dropdownButton.classList.toggle('rotated');
     
@@ -78,8 +81,6 @@ optionsList.addEventListener('click', async (e) => {
         performSearch(mobs, renderMob, "info-wrapper");
         break;
     }
-
-    console.log(selectedCategory);
   }
 });
 

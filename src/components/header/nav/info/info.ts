@@ -20,7 +20,7 @@ const renderInfoWindow = (): void => {
     `;
 }
 
-infoButton.addEventListener('click', async (e) => {
+infoButton.addEventListener('click', () => {
     renderInfoWindow();
     
     const infoWindow = document.getElementById('info-window') as HTMLElement;

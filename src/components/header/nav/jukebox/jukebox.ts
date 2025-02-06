@@ -105,7 +105,7 @@ const renderJukeboxWindow = (): void => {
     });
 }
     
-jukeboxButton.addEventListener('click', async (e) => {
+jukeboxButton.addEventListener('click', () => {
     renderJukeboxWindow();
     
     const jukeboxWindow = document.getElementById('jukebox-window') as HTMLElement;

@@ -1,11 +1,11 @@
 import './result.scss';
 
-type RenderFunction<T> = (data: T) => string;
+type RenderFunction<T> = (searchable: T) => string;
 
-export function displayContent<T>(data: T, render: RenderFunction<T>, wrapperId: string) {
-    const wrapper = document.getElementById(wrapperId) as HTMLElement;
+export function renderSearchables<T>(searchable: T, render: RenderFunction<T>, wrapperId: string) {
+  const wrapper = document.getElementById(wrapperId) as HTMLElement;
   
-    wrapper.innerHTML = "";
+  wrapper.innerHTML = "";
   
-    wrapper.innerHTML = render(data);
-  }
+  wrapper.innerHTML = render(searchable);
+}
