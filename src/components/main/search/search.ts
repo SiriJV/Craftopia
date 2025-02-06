@@ -2,7 +2,7 @@ import './search.scss';
 import { displayContent } from '../result/result';
 // import { showLoadingPortal } from '../../loading-portal/loading-portal';
 // import { hideLoadingPortal } from '../../loading-portal/loading-portal';
-import { favorites } from '../../header/nav/nav';
+import { favorites } from '../../../state/favorites';
 
 type CraftingRecipe = {
   item: string;

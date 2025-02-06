@@ -1,0 +1,80 @@
+@use '../../../../styles/mixins.scss';
+
+#favorites-window {
+    max-width: 500px;
+    min-width: 350px;
+    height: auto;
+    max-height: 500px;
+    overflow-y: scroll;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mixins.outset-border();
+
+    h2 {
+        @include mixins.heading-text();
+        margin-bottom: 10px;
+    }
+  }
+
+#favorites-window {
+    h2 {
+        color: black;
+    }
+
+    span {
+        @include mixins.body-text;
+        color: black;
+    }
+    
+    #favorites-ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        
+        .favorite-list-item {
+            @include mixins.body-text;
+            list-style: none;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        
+            img {
+                width: 40px;
+                height: auto;
+            }
+        }
+
+        p {
+            @include mixins.body-text;
+        }
+    }   
+}
+
+#remove-favorite-window {
+    @include mixins.outset-border;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+        @include mixins.body-text;
+        margin-bottom: 15px;
+    }
+
+    button {
+        @include mixins.body-text;
+        @include mixins.outset-border;
+        outline: 0;
+        padding: 5px 10px;
+        margin-right: 10px;
+    }
+}

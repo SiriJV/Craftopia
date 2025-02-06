@@ -1,7 +1,7 @@
 export const renderItem: (item: Item) => string = (item) => `
   <img src="${item.image}" alt="${item.name}">
   <p>${item.description}</p>
-  <p>NamespacedId:${item.namespacedId}</p>
+  <p>NamespacedId: ${item.namespacedId}</p>
   <p>Stack Size: ${item.stackSize}</p>
   <p>Renewable: ${item.renewable ? "yes" : "no"}</p>
 `;

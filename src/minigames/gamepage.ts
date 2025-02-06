@@ -1,6 +1,10 @@
 import { games } from './games';
 import './gamepage.scss';
 
+//////////////////////////////////
+/////////// Game Page ////////////
+//////////////////////////////////
+
 const body = document.querySelector('body');
 
 const gamePageWindow = document.createElement('article');
@@ -84,3 +88,54 @@ chest.addEventListener('click', function () {
   }
 });
 
+//////////////////////////////////
+///////// Game Details ///////////
+//////////////////////////////////
+
+export function createGameDetailsPage(name: string, descriptionLong: string): void {
+  const mainPage = document.createElement('article');
+  mainPage.id = `${name.replace(/\s+/g, "-").toLowerCase()}-game-details-page`;
+  mainPage.classList.add('game-details-page');
+
+  const gameName = document.createElement('h2');
+  gameName.textContent = name;
+  mainPage.appendChild(gameName);
+
+  const gameDescription = document.createElement('p');
+  gameDescription.textContent = descriptionLong;
+  mainPage.appendChild(gameDescription);
+
+  const buttonWrapper = document.createElement('div');
+  buttonWrapper.classList.add('game-details-page-buttons');
+
+  const exitButton = document.createElement('button');
+  exitButton.textContent = "Exit";
+  exitButton.classList.add('exit-button');
+  exitButton.addEventListener("click", () => {
+      mainPage.remove();
+  });
+  buttonWrapper.appendChild(exitButton);
+
+  const startButton = document.createElement('button');
+  startButton.textContent = "Play";
+  startButton.classList.add('start-button');
+  startButton.addEventListener("click", () => {
+      console.log(`Starting the game: ${name}`);
+      mainPage.remove();
+  });
+  buttonWrapper.appendChild(startButton);
+
+  mainPage.appendChild(buttonWrapper);
+  document.body.appendChild(mainPage);
+}
+
+games.forEach((game, index) => {
+  const wrapperId = `game-wrapper-${index + 2}`;
+  const buttonElement = document.getElementById(wrapperId);
+
+  if (buttonElement) {
+      buttonElement.addEventListener("click", () => {
+          createGameDetailsPage(game.name, game.descriptionlong);
+      });
+  }
+});
