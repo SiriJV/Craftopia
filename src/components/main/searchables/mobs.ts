@@ -1,4 +1,5 @@
 export const renderMob = (mob: Mob): string => `
+  <img class="add-favorite-button" src="https://minecraft-api.vercel.app/images/items/nether_star.gif">
   <img src="${mob.screenshot}" alt="${mob.name}">
   <p>Category: ${mob.category}</p>
   <p>${mob.description}</p>

@@ -1,4 +1,5 @@
 export const renderItem: (item: Item) => string = (item) => `
+  <img class="add-favorite-button" src="https://minecraft-api.vercel.app/images/items/nether_star.gif">
   <img src="${item.image}" alt="${item.name}">
   <p>${item.description}</p>
   <p>NamespacedId: ${item.namespacedId}</p>
