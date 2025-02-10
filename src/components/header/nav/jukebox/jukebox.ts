@@ -81,6 +81,7 @@ const renderJukeboxWindow = (): void => {
         <audio id="audio" src="../../../../../public/music/otherside.mp3"></audio>
         </article>
         `;
+        
         const playButton = document.getElementById('playButton') as HTMLButtonElement;
         const audio = document.getElementById('audio') as HTMLAudioElement;
         
