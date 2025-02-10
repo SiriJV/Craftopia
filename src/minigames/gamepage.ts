@@ -1,5 +1,8 @@
 import { games } from './games';
 import './gamepage.scss';
+import { createMiningMemoryWindow } from './games/mining-memory/mining-memory';
+import { createMiningMemoryGame } from '../minigames/games/mining-memory/mining-memory';
+// import { totalPoints } from '../state/points';
 
 //////////////////////////////////
 /////////// Game Page ////////////
@@ -15,24 +18,32 @@ const h2 = document.createElement('h2');
 h2.innerHTML = "Minigames";
 gamePageWindow.appendChild(h2);
 
-const xpLevelWrapper = document.createElement('section');
-xpLevelWrapper.id = "xp-level-wrapper";
-gamePageWindow.appendChild(xpLevelWrapper);
+// const totalPointsDisplay = document.createElement('p');
+// totalPointsDisplay.innerHTML = `Total points: ${totalPoints}`;
+// gamePageWindow.appendChild(totalPointsDisplay);
 
-const xpLevel = document.createElement('p');
-xpLevel.id = "xp-level";
-xpLevel.innerHTML = "0";
-xpLevelWrapper.appendChild(xpLevel);
+// const xpLevelWrapper = document.createElement('section');
+// xpLevelWrapper.id = "xp-level-wrapper";
+// gamePageWindow.appendChild(xpLevelWrapper);
 
-const xpBarWrapper = document.createElement('section');
-xpBarWrapper.id = "xp-bar-wrapper";
-gamePageWindow.appendChild(xpBarWrapper);
+// const xpLevel = document.createElement('p');
+// xpLevel.id = "xp-level";
+// xpLevel.innerHTML = "0";
+// xpLevelWrapper.appendChild(xpLevel);
 
-const xpBar = document.createElement('img');
-xpBar.src = "../../public/images/items/xp_levels_black.png";
-xpBar.id = "xp-bar";
-xpBarWrapper.appendChild(xpBar);
+// const xpBarWrapper = document.createElement('section');
+// xpBarWrapper.id = "xp-bar-wrapper";
+// gamePageWindow.appendChild(xpBarWrapper);
 
+// const xpBar = document.createElement('img');
+// xpBar.src = "../../public/images/items/xp_levels_black.png";
+// xpBar.id = "xp-bar";
+// xpBarWrapper.appendChild(xpBar);
+
+// const xpBarGreen = document.createElement('img');
+// xpBarGreen.src = "../../public/images/items/xp_levels_green.png";
+// xpBarGreen.id = "xp-bar-green";
+// xpBarWrapper.appendChild(xpBarGreen);
 
 const gameWrappers = document.createElement('section');
 gameWrappers.id = "game-wrappers";
@@ -120,8 +131,9 @@ export function createGameDetailsPage(name: string, descriptionLong: string): vo
   startButton.textContent = "Play";
   startButton.classList.add('start-button');
   startButton.addEventListener("click", () => {
-      console.log(`Starting the game: ${name}`);
       mainPage.remove();
+      createMiningMemoryWindow();
+      createMiningMemoryGame();
   });
   buttonWrapper.appendChild(startButton);
 

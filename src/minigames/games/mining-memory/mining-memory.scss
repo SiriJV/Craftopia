@@ -1,0 +1,146 @@
+@use '../../../styles/mixins.scss';
+@use '../../../styles/root.scss';
+
+#mining-memory-game-window {
+    @include mixins.outset-border;
+    @include mixins.center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    padding-top: 0px;
+    z-index: 3;
+
+    #text-and-button-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        p {
+            @include mixins.body-text;
+            margin: 15px;
+            margin-left: 0px;
+        }
+    
+        button {
+            @include mixins.outset-border;
+            outline: 0;
+            @include mixins.body-text;
+            height: fit-content;
+            padding: 3px 10px;
+            align-self: center;
+        }
+    }
+
+    section {
+        @include mixins.inset-border;
+        width: auto;
+        height: auto;
+        background-image: url('../../../../public/images/textures/stone_texture.webp');
+        background-size: 15%;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+    gap: 30px;
+    margin: 30px;
+    // max-width: 420px;
+  }
+  
+  .card {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+  }
+  
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face */
+  }
+  
+  .front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none; /* Initially hide the front */
+
+    img {
+      width: 80px;
+      height: 80px;
+      image-rendering: pixelated;
+    }
+  }
+  
+  .back {
+    display: block; /* Initially show the back */
+    image-rendering: pixelated;
+    
+    img {
+      width: 80px;
+      height: 80px;
+      image-rendering: pixelated;
+    }
+  }
+  
+  .card.flipped .back {
+    display: none; /* Hide the back when flipped */
+  }
+  
+  .card.flipped .front {
+    display: block; /* Show the front when flipped */
+  }
+  
+  
+  
+
+
+#restart-or-exit-mining-memory {
+    @include mixins.outset-border;
+    @include mixins.center;
+    width: auto;
+    height: auto;
+    z-index: 4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        @include mixins.body-text;
+        margin-bottom: 15px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+
+        button {
+            @include mixins.outset-border;
+            outline: 0;
+            @include mixins.body-text;
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+    
+        button:hover {
+            background-color: #8B8B8B;
+        }
+    
+        .exit-mining-memory-button {
+            flex-grow: 1;
+        }
+    
+        .restart-mining-memory-button {
+            flex-grow: 3;
+        }
+    }
+}
