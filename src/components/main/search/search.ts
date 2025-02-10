@@ -42,7 +42,6 @@ export function performSearch<T extends SearchableItem>(
     
     let results = data.filter((element) =>
       element.name.toLowerCase().includes(search)
-
   );
     // hideLoadingPortal();
   
@@ -72,7 +71,6 @@ export function performSearch<T extends SearchableItem>(
           if (matchingRecipe) {
             const recipeLink = document.createElement("a");
             recipeLink.innerHTML = "See crafting recipe";
-
             resultsBox.appendChild(recipeLink);
           }
 
